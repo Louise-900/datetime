@@ -37,10 +37,20 @@ dataset['minute_slot']=numpy.select([
 
 dataset['minutes_slot_in_day']=dataset['hour']*4+dataset['minute_slot']
 
-dataset['diff']=dataset['Date']-datetime(2018,1,24,0,0,0)
-print(dataset[['Date','diff']])
+#dataset['diff']=dataset['Date']-datetime(2018,1,24,0,0,0)
+#print(dataset[['Date','diff']])
 
 
 #	print(dataset[['Date','hour','hour_slot']])
 
 #pandas.get_dummies(dataset['month'])
+
+
+time_block_dataset = pandas.DataFrame()
+time_block_dataset['time_in_day'] = numpy.arange(0,96,1)
+
+print(time_block_dataset)
+
+#count statistics#
+#== 后面跟的时condition，0--> (1.15) 1--> (16-20)
+print(sum(dataset['minutes_slot_in_day']== 1)*1) #condition , wheather the crime is occured between 0-15 minutes midnight   #multiply by 1, true=1

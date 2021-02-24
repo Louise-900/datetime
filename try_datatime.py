@@ -53,4 +53,7 @@ print(time_block_dataset)
 
 #count statistics#
 #== 后面跟的时condition，0--> (1.15) 1--> (16-20)
-print(sum(dataset['minutes_slot_in_day']== 1)*1) #condition , wheather the crime is occured between 0-15 minutes midnight   #multiply by 1, true=1
+print(sum(   dataset['minutes_slot_in_day']== 1      )*1) #condition , wheather the crime is occured between 0-15 minutes midnight   #multiply by 1, true=1
+
+(dataset['Latitue']<41.11 & dataset['Latitue'] > 41.1) & (dataset['Longitude']> a & dataset['Longitude']<b)
+

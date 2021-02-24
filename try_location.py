@@ -13,6 +13,9 @@ dataset = dataset.sample(frac=0.1).reset_index(drop=True)
 
 #relative location, relative to police station
 
+
+
+
 def get_haversine(x):
   lat1 = x['Latitude']
   long1 = x['Longitude']
